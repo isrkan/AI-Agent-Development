@@ -1,10 +1,10 @@
 # AI Agent Development Guide
 This repository is a comprehensive educational and reference guide for developing AI agents applications. It follows a layered architecture that progressively covers foundational components through deployment and safety considerations.
 
-## Repository Structure
+## Repository structure
 
 ```
-AI-Agent-Guide/
+AI-Agent-Development-Guide/
 ├── Foundation-layer/                      # Core infrastructure
 │   ├── LLMs/                              # Language model integration
 │   ├── Memory/                            # Short-term and long-term memory
@@ -22,7 +22,7 @@ AI-Agent-Guide/
     └── Guardrails-system/                 # Safety monitoring
 ```
 
-## Layer Descriptions
+## Layer descriptions
 
 ### Foundation-layer
 Core building blocks for AI agents:

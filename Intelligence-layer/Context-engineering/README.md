@@ -216,11 +216,9 @@ Transform strategies focus on modifying the content and structure of context to 
 ##### *Compress* strategies: Reducing context size
 Compress strategies reduce the size of necessary information without losing critical details.
 - **Conversation summarization**: Periodically summarize older conversation turns, preserving key information while reducing token count. Use LLM-based summarization with explicit instructions about what to preserve.
-- **Embedding-based compression**: Store full information in vector databases and retrieve only when needed, keeping embeddings in context for relevance checking.
 - **Tool result compression**: Summarize verbose tool outputs, extracting key information and discarding unnecessary details.
 - **Memory consolidation**: Merge related memories and episodes over time, preventing fragmentation while preserving essential information.
 - **Hierarchical compression**: Compress at different granularities - keep recent messages verbatim, summarize older messages, and provide only high-level summaries of ancient history.
-- **Context trimming**: Remove low-relevance, low-importance or outdated context elements. Use relevance scoring, temporal decay and priority thresholds to drop information that no longer contributes to the current task.
 
 ##### *Order* strategies: Structuring and sequencing context
 These strategies control how information is arranged within the prompt and how ordering affects model attention. Because LLMs do not weigh all tokens equally, as LLMs prioritize some parts of the context window more than others (early + final tokens), the layout of context has a direct impact on reliability, alignment, and task performance.
