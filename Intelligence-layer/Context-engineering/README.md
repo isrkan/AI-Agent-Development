@@ -223,7 +223,6 @@ Compress strategies reduce the size of necessary information without losing crit
 ##### *Order* strategies: Structuring and sequencing context
 These strategies control how information is arranged within the prompt and how ordering affects model attention. Because LLMs do not weigh all tokens equally, as LLMs prioritize some parts of the context window more than others (early + final tokens), the layout of context has a direct impact on reliability, alignment, and task performance.
 * **Salience ordering:** placing the most important instructions early and late in the prompt where models weigh attention more strongly.
-* **Instruction hierarchy**: Clearly separate and sequence system, developer, and user instructions to prevent ambiguity and reinforce authority.
 * **Task-first prompt layout**: Begin with high-level goals, followed by supporting details, examples, or constraints.
 * **Temporal ordering**: Present events or facts chronologically to reduce confusion and maintain coherence.
 * **Chunk grouping**: Organize related information into structured blocks (e.g., tools, memories, task details), helping the LLM parse and prioritize content efficiently.
