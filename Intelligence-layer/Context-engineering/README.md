@@ -222,12 +222,13 @@ Compress strategies reduce the size of necessary information without losing crit
 - **Hierarchical compression**: Compress at different granularities - keep recent messages verbatim, summarize older messages, and provide only high-level summaries of ancient history.
 * **Instruction distillation**: Synthesize long or repetitive instructions into compact rules through redundancy elimination, rule consolidation and prioritization.
 
-##### *Order* strategies: Structuring and sequencing context
-These strategies control how information is arranged within the prompt and how ordering affects model attention. Because LLMs do not weigh all tokens equally, as LLMs prioritize some parts of the context window more than others (early + final tokens), the layout of context has a direct impact on reliability, alignment, and task performance.
+##### *Structure* strategies: Ordering and formatting context
+Structure strategies control how retrieved context is arranged and formatted before being passed to the model. This covers both the sequencing of information within the prompt and the formatting of that information. Because LLMs do not weigh all tokens equally - prioritizing early and final tokens - layout and format have a direct impact on reliability, alignment, and task performance.
 * **Salience ordering:** placing the most important instructions early and late in the prompt where models weigh attention more strongly.
 * **Task-first prompt layout**: Begin with high-level goals, followed by supporting details, examples, or constraints.
 * **Temporal ordering**: Present events or facts chronologically to reduce confusion and maintain coherence.
 * **Chunk grouping**: Organize related information into structured blocks (e.g., tools, memories, task details), helping the LLM parse and prioritize content efficiently.
+- **Context formatting**: Convert raw retrieved text into a consistent format before passing it to the model. Compares Markdown, JSON, XML, TOON and plain text - each with different trade-offs in token cost, structural clarity, and LLM parsing reliability.
 
 #### *Isolate* strategies: Separating concerns
 Isolate strategies separate different concerns into distinct contexts rather than cramming everything into a single agent's context.
