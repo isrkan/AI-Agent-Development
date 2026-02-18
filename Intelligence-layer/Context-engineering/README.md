@@ -189,6 +189,7 @@ Write strategies focus on creating high-quality context from the start, reducing
 - **Tool system design**: Design tool interfaces and documentation that maximize clarity and usability from the outset. This includes establishing clear naming conventions that reflect tool purpose, structuring tool parameters with self-documenting schemas (e.g., Pydantic models with descriptive field names and validation), providing concise yet comprehensive descriptions that explain both what the tool does and when to use it, including usage examples, and organizing tools into logical categories to reduce decision ambiguity. Write tool specifications that are maximally informative with minimal tokens.
 - **RAG system design**: Design RAG systems that produce well-structured, contextually rich outputs from the start. This includes implementing effective chunking strategies, semantic indexing with metadata, and retrieval pipelines that return information with clear provenance markers, relevance indicators, source attribution, and confidence scores. Structure the entire RAG workflow—from document processing to context injection to maximize signal-to-noise ratio.
 - **Memory system architecture**: Design memory systems with intentional schemas and encoding strategies from the ground up. This includes defining memory types (episodic vs. semantic, short-term vs. long-term), establishing structured storage formats optimized for both retrieval and comprehension, implementing semantic tagging and metadata systems, assigning importance and relevance scores, and creating consolidation rules for merging or summarizing related memories. Design the memory lifecycle to determine what gets stored, how it's encoded, when it's retrieved, and when it's compressed or discarded.
+* **Canonicalization**: Normalize data as it enters the system by standardizing entity formats (order numbers, phone numbers, emails), resolving temporal references (converting "yesterday" to specific dates), and ensuring consistent formatting before storage.
 
 **Context maintenance**:
 - **Append-only**: New information is always appended to context, never modifying existing content. This maintains a complete audit trail but can lead to context overflow.
@@ -229,7 +230,7 @@ These strategies control how information is arranged within the prompt and how o
 
 ##### *Rewrite* strategies: Refining content for clarity and accuracy
 Rewrite strategies involve transforming context into cleaner, more structured or more precise forms before use. These techniques ensure the information fed into the model is easy to interpret and free from ambiguity, redundancy or noise.
-* **Canonicalization**: Convert unstructured or messy conversation history into normalized, schema-aligned formats that are easier for the agent to understand and reference.
+
 * **Semantic re-encoding**: Rewrite complex, verbose, or ambiguous information into concise, high-clarity summaries optimized for LLM reasoning.
 * **Perspective adaptation**: Adjust context for different agent roles or personas (e.g., planner vs. executor vs. critic), ensuring each sub-agent receives information framed for its responsibilities.
 * **Instruction distillation**: Synthesize long or repetitive instructions into compact rules that preserve intent while reducing cognitive load.
