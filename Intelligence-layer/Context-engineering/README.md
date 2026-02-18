@@ -220,6 +220,7 @@ Compress strategies reduce the size of necessary information without losing crit
 - **Tool result compression**: Summarize verbose tool outputs, extracting key information and discarding unnecessary details.
 - **Memory consolidation**: Merge related memories and episodes over time, preventing fragmentation while preserving essential information.
 - **Hierarchical compression**: Compress at different granularities - keep recent messages verbatim, summarize older messages, and provide only high-level summaries of ancient history.
+* **Instruction distillation**: Synthesize long or repetitive instructions into compact rules through redundancy elimination, rule consolidation and prioritization.
 
 ##### *Order* strategies: Structuring and sequencing context
 These strategies control how information is arranged within the prompt and how ordering affects model attention. Because LLMs do not weigh all tokens equally, as LLMs prioritize some parts of the context window more than others (early + final tokens), the layout of context has a direct impact on reliability, alignment, and task performance.
@@ -227,14 +228,6 @@ These strategies control how information is arranged within the prompt and how o
 * **Task-first prompt layout**: Begin with high-level goals, followed by supporting details, examples, or constraints.
 * **Temporal ordering**: Present events or facts chronologically to reduce confusion and maintain coherence.
 * **Chunk grouping**: Organize related information into structured blocks (e.g., tools, memories, task details), helping the LLM parse and prioritize content efficiently.
-
-##### *Rewrite* strategies: Refining content for clarity and accuracy
-Rewrite strategies involve transforming context into cleaner, more structured or more precise forms before use. These techniques ensure the information fed into the model is easy to interpret and free from ambiguity, redundancy or noise.
-
-* **Semantic re-encoding**: Rewrite complex, verbose, or ambiguous information into concise, high-clarity summaries optimized for LLM reasoning.
-* **Perspective adaptation**: Adjust context for different agent roles or personas (e.g., planner vs. executor vs. critic), ensuring each sub-agent receives information framed for its responsibilities.
-* **Instruction distillation**: Synthesize long or repetitive instructions into compact rules that preserve intent while reducing cognitive load.
-* **Noise removal**: Strip filler language, redundant statements, and irrelevant details that can distract or confuse the agent.
 
 #### *Isolate* strategies: Separating concerns
 Isolate strategies separate different concerns into distinct contexts rather than cramming everything into a single agent's context.
