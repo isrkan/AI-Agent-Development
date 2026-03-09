@@ -242,5 +242,3 @@ Isolate strategies separate different concerns into distinct contexts rather tha
 These ensure long-running agents avoid degradation. This is important for agents with long-running loops or multi-day sessions. Examples:
 * Scheduled context cleanup.
 * Memory refactoring.
-* Rebuilding context from authoritative sources.
-* Refreshing task objectives to avoid drift.
