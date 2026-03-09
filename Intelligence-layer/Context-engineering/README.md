@@ -236,8 +236,6 @@ Isolate strategies separate different concerns into distinct contexts rather tha
     - **Hierarchical coordination**: A coordinator agent breaks down tasks and delegates to specialized sub-agents. The coordinator maintains high-level context while sub-agents work with task-specific context.
     - **Peer collaboration**: Multiple agents work together as peers, sharing context through a common memory or message bus. Each agent maintains its own perspective and expertise.
     - **Pipeline processing**: Agents are arranged in a pipeline where each agent processes the output of the previous one, adding its own context and transformations.
-- **Context chaining**: Break long workflows into stages where each stage has its own context. Pass only essential information between stages. When the agent needs information from previous contexts, it can retrieve them on-demand rather than keeping everything in active memory.
-- **Layered context**: Organize context into layers (system, task, conversation, tool) with clear boundaries and access patterns. This prevents interference between layers.
 - **Specialized memory stores**: Maintain separate memory systems for different purposes (user preferences, domain knowledge, procedural patterns) with independent retrieval and management.
 
 #### *Refresh* Strategies: Periodically cleaning, updating, or rewriting context
