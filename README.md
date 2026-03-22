@@ -17,7 +17,8 @@ AI-Agent-Development-Guide/
 │   ├── Context-engineering/               # Context management strategies
 │   └── Planning_and_reasoning/            # Extended thinking and reasoning
 ├── Architecture-and-orchestration-layer/  # Workflows
-│   └── Agent-loop-and-control-flow/       # Design and workflow patterns
+│   ├── Agent-loop-and-control-flow/       # Design and workflow patterns
+│   └── Human-in-the-loop-patterns/        # HITL integration
 └── Safety-layer/                          # Guardrails and compliance
     └── Guardrails-system/                 # Safety monitoring
 ```
@@ -44,6 +45,7 @@ Advanced reasoning and knowledge retrieval:
 ### Architecture-and-orchestration-layer
 Complex workflow orchestration and agent coordination:
 - **Agent-loop-and-control-flow/**: workflow patterns and agentic design patterns.
+- **Human-in-the-loop-patterns/**: HITL integration (approval workflows, feedback integration, escalation, interactive refinement, audit and oversight).
 
 ### Safety-layer
 Guardrails integration with Qualifire for prompt injection detection, PII protection, and content safety.
