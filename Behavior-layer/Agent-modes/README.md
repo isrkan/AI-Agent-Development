@@ -8,9 +8,12 @@ Modes are distinct from prompts and skills. A prompt is a single instruction; a 
 
 Think of modes as the "operating context" of an agent. The same underlying model, with the same tools, can behave like a cautious copilot or an autonomous executor depending solely on which mode is active.
 
+### Persona vs. mode
+A persona defines who the agent is - its communication style, knowledge domain, and tone. A mode defines how the agent operates - its autonomy level, permissions, and escalation rules. They are orthogonal. A persona without a mode has no operational constraints.
+
 ## The two axes of modes
 
-### Axis 1 — Autonomy level (How much the agent decides)
+### Axis 1 - Autonomy level (How much the agent decides)
 
 | Level | Name | Description |
 |-------|------|-------------|
@@ -20,7 +23,7 @@ Think of modes as the "operating context" of an agent. The same underlying model
 | 3 | Semi-autonomous | Agent acts on low-risk, escalates on high-risk |
 | 4 | Fully autonomous | Agent plans, acts, and self-corrects end-to-end |
 
-### Axis 2 — Behavioral type (What the agent does)
+### Axis 2 - Behavioral type (What the agent does)
 
 | Type | Name | Description |
 |------|------|-------------|
